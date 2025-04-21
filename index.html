@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Google APIS</title></head>
+<body>
+  <h1>Google Maps</h1>
+  <div id="map" style='height:300px; width:100%;'></div>
+
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB06QlAYRPcX3qsD9dpaXlDw8tCGfMg8Js&callback=initMap"></script>
+
+
+  <script>
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat:19.1081, lng: 72.8795}, //Marol Naka
+        zoom: 15,
+      });
+      const marker = new google.maps.Marker({
+        position: { lat: 19.1081, lng: 72.8795 },
+        map: map,
+        title: 'Marol Naka',
+      });
+    }
+  </script>
+  <h2>Google Search</h2>
+  <script async src="https://cse.google.com/cse.js?cx=b24005a08cd97459f"></script>
+  <div class="gcse-search"></div>
+</body>
+</html>
